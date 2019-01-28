@@ -17,7 +17,6 @@ int * sort(int x, int y)
 	int *p = output;
 	return p;
 }
-
 int solve(int x1, int y1, int x2, int y2, int X1, int Y1, int X2, int Y2) {
 	std::cout << "Computing with " << std::endl;
 	std::cout << x1 << " " << y1 << " " << x2 << " " << y2 << " " << std::endl <<X1 << " " << Y1 << " "<< X2 << " " << Y2 << std::endl;
@@ -31,7 +30,6 @@ int solve(int x1, int y1, int x2, int y2, int X1, int Y1, int X2, int Y2) {
 	f = sort(*c, *d);
 	g = sort(*(a+1), *(b+1));
 	h = sort(*(c+1), *(d+1));
-	
 	MAXX = *e;
 	MAXY = *f;
 	MINY = *(h+1);
@@ -46,8 +44,6 @@ int solve(int x1, int y1, int x2, int y2, int X1, int Y1, int X2, int Y2) {
 	else {
 		return y * y;
 	}
-
-
 }
 int main()
 {
