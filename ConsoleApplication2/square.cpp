@@ -1,4 +1,4 @@
-// ConsoleApplication2.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// square.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include "pch.h"
@@ -17,20 +17,24 @@ int * sort(int x, int y)
 }
 
 int solve(int x1, int y1, int x2, int y2, int X1, int Y1, int X2, int Y2) {
+	std::cout << "Computing with " << std::endl;
+	std::cout << x1 << " " << y1 << " " << x2 << " " << y2 << " " << std::endl <<X1 << " " << Y1 << " "<< X2 << " " << Y2 << std::endl;
 	int *a, *b, *c, *d, *e, *f, *g, *h;
 	int MINX, MINY, MAXX, MAXY;
 	a = sort(x1, x2);
 	b = sort(X1, X2);
 	c = sort(y1, y2);
 	d = sort(Y1, Y2);
-	e = sort(a[0], b[0]);
-	f = sort(c[0], d[0]);
-	g = sort(a[1], b[1]);
-	h = sort(c[1], d[1]);
-	MAXX = e[0];
-	MAXY = f[0];
-	MINY = h[1];
-	MINX = g[1];
+	e = sort(*a, *b);
+	f = sort(*c, *d);
+	g = sort(*(a+1), *(b+1));
+	h = sort(*(c+1), *(d+1));
+	
+	MAXX = *e;
+	MAXY = *f;
+	MINY = *(h+1);
+	MINX = *(g+1);
+	std::cout << MAXX << " " << MAXY << " " << MINX << " " << MINY;
 	int x, y;
 	x = MAXX - MINX;
 	y = MAXY - MINY;
