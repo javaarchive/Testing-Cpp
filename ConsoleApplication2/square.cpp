@@ -30,6 +30,7 @@ int solve(int x1, int y1, int x2, int y2, int X1, int Y1, int X2, int Y2) {
 	f = sort(*c, *d);
 	g = sort(*(a+1), *(b+1));
 	h = sort(*(c+1), *(d+1));
+	std::cout << *a << " " << *b << " " << *c << " " << *d << " " << *e << " " << *f << " " << *g << " " << *h << " " << std::endl;
 	MAXX = *e;
 	MAXY = *f;
 	MINY = *(h+1);
