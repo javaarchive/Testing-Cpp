@@ -9,11 +9,13 @@ std::ofstream fout("square.out");
 int * sort(int x, int y) 
 {
 	int output[2] = { y,x };
+	
 	if (x > y) {
 		output[0] = x;
 		output[1] = y;
 	}
-	return output;
+	int *p = output;
+	return p;
 }
 
 int solve(int x1, int y1, int x2, int y2, int X1, int Y1, int X2, int Y2) {
