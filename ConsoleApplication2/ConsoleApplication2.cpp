@@ -4,13 +4,14 @@
 #include "pch.h"
 #include <iostream>
 #include <fstream>
-
-ifstream fin("filename.in");
-ofstream fout("filename.out");
+std::ifstream fin("filename.in");
+std::ofstream fout("filename.out");
 int main()
 {
+	int N;
 	fin >> N;
 	fout << N;
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
